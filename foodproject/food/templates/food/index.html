@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% load static %}
+       <link rel="stylesheet" href="{%  static 'index1.css' %}">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <title>fooddetails</title>
+</head>
+<body>
+   <!--Navbar start-->
+    <div class="container-fluid">
+                <!--Navbar start-->
+                <nav class="navbar navbar-expand-sm fixed-top bg-light text-info">  <!--If background applied for navbar,we get navbar seperately,i.e not above the background image-->
+                    <a href="#" class="navbar-brand"><img src="/static/images/logo.jpeg" width="40"/></a>
+                    <h2 class="mr-5">Food drive</h2>
+                    <button  class="navbar-toggler" data-toggle="collapse" data-target="#navhide" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navhide">
+                        <ul class="navbar-nav px-3">
+                            <li class="nav-item active px-4"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                            <li class="nav-item px-4"><a href="{% url 'about' %}" class="nav-link">About us</a></li> 
+                            <li class="nav-item dropdown px-4"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a>
+                                <div class="dropdown-menu">
+                                    <a href="{% url 'login' %}" class="dropdown-item">DonorLogin</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#"  class="dropdown-item">AgentLogin</a>
+                                </div>
+                            </li>   
+                            <li class="nav-item px-4"><a href="{% url 'contact' %}" class="nav-link">Contact us</a></li>
+                            <li class="nav-item px-4"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>
+    </div>
+
+    <div class="content">
+        <h2 class="my-3 text-center">Upload Food Details</h2>
+        <form method="post" action="index" class="mx-5 my-2">
+            {% csrf_token %}
+            <label for="fname">Name</label>
+            <input type="text" class="test p-2 m-2" placeholder="enter donor's name" size="50" name="name"></br>
+            <label for="email">Email Id</label>
+            <input type="email" class="test p-2 m-2" placeholder="enter your email id" size="50" name="email"></br> 
+            <label for="Iname">ItemName</label>
+            <input type="text" class="test p-2 m-2" placeholder="enter fooditem" size="47" name="iname"></br>
+            <label for="Itype">FoodItem Type</label>
+            <select name="itype">
+                <option value = "Veg" selected>Veg</option>
+                <option value = "Nonveg">Nonveg</option>
+                <option value = "Both">Both</option>
+             </select></br>
+             <label>Enter date of cooking:</label>
+             <input type="date" class="m-2" name="date" placeholder="date of cooking"></br>
+             <label for="Hlevel">Hygiene level</label>
+             <select name="hlevel">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+             </select></br>
+             <label for="expry">Expected food expiry time:</label>
+             <input type="time" class="m-2" name="time" placeholder="Expected expiry time"></br>
+             <label for="mobileno">Mobile no:</label>
+             <input type="tel" class="m-2" name="mobileno" placeholder="mobile num"></br>
+             <label for="Loc">Location</br>
+             <textarea rows="2" cols="60" class="p-2 m-2" placeholder="enter address to pickup" name="location"></textarea></br>
+            <button type="submit" class="btn btn-success px-5" onclick="successmsg()">Save</button>
+            <p class="text-success" id="smsg"></p>
+             </form>
+    </div>
+    <script>
+        function successmsg(){
+            document.getElementById("smsg").innerHTML="Your details are saved successfully";
+        }
+    </script>
+</body>
+</html>

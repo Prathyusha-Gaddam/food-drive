@@ -1,0 +1,32 @@
+.test1 img{
+    width:100%;
+    height: 200px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.footer{
+    background-color: rgb(67, 68, 71);
+}
+.test1 p{
+    font-family: cursive;
+}
+.about{
+    margin-top: 70px;
+}
+.aboutus h2{
+    color:rgb(173, 70, 70);
+}
+.aboutus p{
+    font-family: cursive;
+}
+.aboutus .box1{
+    box-sizing: border-box;
+    border-radius: 10px;
+    flex-basis: 31%;
+    background: #fff3f3;
+    margin-top: 20px;
+    padding:10px;
+}
+.aboutus .box1:hover{
+    box-shadow: 0 0 20px 0px rgba(155, 155, 157, 0.7);
+}

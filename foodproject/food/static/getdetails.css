@@ -1,0 +1,15 @@
+.box{
+    box-sizing: border-box;
+    border-radius: 10px;
+    flex-basis: 31%;
+    background: #fff3f3;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 80px;
+}
+.box:hover{
+    box-shadow: 0 0 20px 0px rgba(155, 155, 157, 0.7);
+}
+.box h2{
+    color:darkorange;
+}

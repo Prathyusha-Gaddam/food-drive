@@ -1,0 +1,38 @@
+.menu{
+    background-image:url('./images/8.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    position: relative;
+}
+
+.bg_text{
+    margin: 290px auto;
+}
+.box{
+    position: absolute;
+    display:flex;
+    top:450px;
+    left:240px;
+    margin:50px;
+}
+.box1{ 
+    background-color: bisque;
+    max-width: 400px;
+    margin:50px;
+    padding:50px;
+}
+.box1 span{
+    padding-left:120px;
+}
+.bg_text h1{
+    font-weight: bolder;
+    color:brown;
+}
+.box1 p{
+    font-family: cursive;
+}
+.footer{
+    background-color: rgb(67, 62, 62);
+    margin-top: 140px;
+}
