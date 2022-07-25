@@ -1,0 +1,147 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'About3.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css" integrity="sha512-qzgHTQ60z8RJitD5a28/c47in6WlHGuyRvMusdnuWWBB6fZ0DWG/KyfchGSBlLVeqAz+1LzNq+gGZkCSHnSd3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+       <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark text-info">  <!--If background applied for navbar,we get navbar seperately,i.e not above the background image-->
+                <a href="#" class="navbar-brand"><img src="/static/images/logo1.jpg" width="40"/></a>
+                <h2 class="text-white mr-5">Food drive</h2>
+                <button  class="navbar-toggler" data-toggle="collapse" data-target="#navhide" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navhide">
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item px-4"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                        <li class="nav-item active px-4"><a href="{% url 'about' %}" class="nav-link">About us</a></li>
+                        <li class="nav-item  px-4"><a href="{% url 'register' %}" class="nav-link">Register</a></li>
+                        <li class="nav-item dropdown px-4"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a>
+                            <div class="dropdown-menu">
+                                <a href="{% url 'login' %}" class="dropdown-item">DonorLogin</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#"  class="dropdown-item">AgentLogin</a>
+                            </div>
+                        </li>   
+                        <li class="nav-item px-4"><a href="{% url 'contact' %}" class="nav-link">Contact us</a></li>
+                    </ul>
+                </div>
+            </nav>
+       </div>
+<!--Navbar end-->
+        <div class="about">
+            <div class="container">
+                <div class="services">
+                    <h2 class="text-center">What we do and Who we are</h2>
+                    <p class="text-center">please visit our website</p>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <div class="test1 border">
+                                <img src="/static/images/2.jpg"/ >
+                                <h4 class="text-secondary px-5 py-2">DONATEINKIND</h4>
+                                <p class="p-5">Half the world’s starving;</br>the other half is trying to lose weight</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <div class="test1 border">
+                                <img src="/static/images/4.jpg"/>
+                                <h4 class="text-secondary px-5 py-2">DONATE NEEDY</h4>
+                                <p class="p-5">If we want to eliminate hunger, </br>everybody has to be involved.Join us</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <div class="test1 border">
+                                <img src="/static/images/5.jpeg"/>
+                                <h4 class="text-secondary px-5 py-2">AMMA FOUNDATION</h4>
+                                <p class="px-5 pt-4 pb-5">There is nothing greater than love invested in </br>helping to feed the impoverished living in hunger.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--About end-->
+    <div class="container my-5">
+        <div class="aboutus">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8">
+                    <h1 class="border-bottom my-3">QUESTIONS About Food Donation</h1>
+                    <div class="box1">
+                    <h2>WHERE CAN I MAKE THIS DONATION?</h2>
+                    <p>Just register in our page and if u want to make a donation ,just login as donar.You will be redirected to the page where all 
+                        details of your donation can be uploaded.The agent will look into your details and notify you accordingly.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8">
+                    <div class="box1">
+                    <h2>HOW DOES MY FOOD DONATION HELP PEOPLE?</h2>
+                    <p>Our Website has been feeding numerous needy and hungry people for a long time now. So when you donate, you make a difference. An additional 50 meals, means an additional 50 people fed.
+                        You can be assured that any food donated by you towards the ‘Food for Life’ program, will be used for this purpose only.       
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8">
+                    <div class="box1">
+                    <h2>WHERE CAN I MAKE THIS DONATION?</h2>
+                    <p>Just register in our page and if u want to make a donation ,just login as donar.You will be redirected to the page where all 
+                        details of your donation can be uploaded.The agent will look into your details and notify you accordingly.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+         <!--Footer start-->
+    <div class="container-fluid">
+         <div class="footer">
+            <div class="container-fluid my-4 py-5">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12">
+                        <div class="text-center py-3">
+                        <input type="email" placeholder="Enter email address" size="40" class="p-2"/>
+                        <button class="btn btn-primary text-white py-2 px-3" type="button"><a href="{% url 'register' %}" class="text-white">Sign up</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 px-5 py-2">
+                        <h1 class="text-white">Food drive</h1>
+                        <h3 class="text-white mx-5">- End Hunger Today</h3>
+                        <h4 class="text-white"><a href="">Home</a>|<a href="">About</a>|<a href="">Contact</a></h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 text-white">
+                        <span><i class="fas fa-map-marker-alt fa-2x p-2"></i>Shaikpet,Hyderabad,Telanagana-500003</span></br>
+                        <span><i class="fa fa-phone fa-2x p-2" aria-hidden="true"></i>+91 22-63488782</span></br>
+                        <span><i class="fa fa-envelope fa-2x p-2" aria-hidden="true"></i>support@fooddrive.com</span></br>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 text-white">
+                        <h3 class="text-white">On our way to end hunger</h3>
+                        <p class="text-secondary">Donate food to the needy and together let's solve hunger today</p>
+                        <span class="px-2"><i class="fab fa-facebook fa-2x"></i></span>
+                        <span class="px-2"><i class="fab fa-twitter-square fa-2x"></i></span>
+                        <span class="px-2"><i class="fab fa-instagram fa-2x"></i></span>
+                        <span class="px-2"><i class="fab fa-linkedin fa-2x"></i></i></span>
+                    </div>
+            </div>
+           </div>
+        </div>
+    </div>
+        <!--Footer end-->
+    </body>
+</html>
